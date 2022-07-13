@@ -16,18 +16,24 @@
 # limitations under the License.
 #
 
-# Specify phone tech before including full_phone
-$(call inherit-product, vendor/omni/config/gsm.mk)
-
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, build/target/product/embedded.mk)
-
 # Inherit Telephony packages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit language packages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    charger
+
+# Explicitly
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=msm8916
+
+# The kernel does not support aio with ffs.
+PRODUCT_PROPERTY_OVERRIDES += \
+	sys.usb.ffs.aio_compat=1
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := pd1510
