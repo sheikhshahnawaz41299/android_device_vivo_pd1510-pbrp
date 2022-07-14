@@ -102,7 +102,7 @@ TW_IGNORE_ABS_MT_TRACKING_ID := true
 TW_CRYPTO_USE_SBIN_VOLD := true
 
 # Strip some function to reduce size
-#TW_EXCLUDE_NANO := true
+TW_EXCLUDE_NANO := true
 TW_NO_EXFAT := true
 TW_EXCLUDE_AAPT := true
 TW_EXCLUDE_TZDATA := true
