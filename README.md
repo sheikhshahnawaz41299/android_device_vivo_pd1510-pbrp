@@ -1,4 +1,4 @@
-## PBRP device tree for Vivo Y51L (pd1510)
+## PitchBlackRecoveryProject device tree for Vivo Y51L (pd1510)
 
 
 To initialize your local repository using the OMNIROM trees to build TWRP, use a command like this:
@@ -10,7 +10,7 @@ Add to `.repo/local_manifests/pd1510.xml`:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<project name="sheikhshahnawaz41299/android_device_vivo_pd1510-pbrp" path="device/vivo/pd1510"  remote="github" revision="pbrp-8.1" />
+	<project name="sheikhshahnawaz41299/android_device_vivo_pd1510-pbrp" path="device/vivo/pd1510"  remote="github" revision="android-8.1" />
 </manifest>
 ```
 
